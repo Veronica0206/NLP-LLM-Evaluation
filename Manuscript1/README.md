@@ -36,16 +36,16 @@ This repository contains the data and code for reproducing all analyses in the p
 │   ├── TwoSetsLabels.ipynb                          # Run-to-run AI consistency (Run 1 vs Run 2)
 │   └── HateSpeech overall_evaluation.ipynb           # Human-AI agreement, confusion matrices, entropy analysis
 │
-├── 4. Hard Label Modeling_Primary Analysis/
+├── 3. Hard Label Modeling_Primary Analysis/
 │   ├── T31_HateSpeech_human_pure_multiclass.ipynb    # Models trained on human-unanimous labels (n=9,845)
 │   ├── T32_HateSpeech_human_majority_multiclass.ipynb# Models trained on human-majority labels (n=19,229)
 │   └── T33_HateSpeech_4o_mini_multiclass.ipynb       # Models trained on AI labels (n=20,148)
 │
-├── 5. Hard Label Modeling_Supportive Analysis/
+├── 4. Hard Label Modeling_Supportive Analysis/
 │   ├── T41_HateSpeech_4o_mini_pure_multiclass.ipynb  # AI labels on human-unanimous subset (controlled)
 │   └── T42_HateSpeech_4o_mini_majority_multiclass.ipynb # AI labels on human-majority subset (controlled)
 │
-└── 6. Soft Label Modeling/
+└── 5. Soft Label Modeling/
     ├── T51_HateSpeech_human_softtrain.ipynb          # ALBERT with human vote distributions
     ├── T51_HateSpeech_4omini_softtrain.ipynb          # ALBERT with AI probability vectors
     ├── T52_HateSpeech_human_softall.ipynb             # Full-data human soft labels
