@@ -56,7 +56,7 @@ This repository contains the data and code for reproducing all analyses in the p
 
 | File | Rows | Columns | Description |
 |------|------|---------|-------------|
-| `hatexplain_model_ready_with_ai_labels.csv` | 20,149 | 13 | Streamlined version for modeling: post text, three human labels, human-majority, human-unanimous, AI hard label, and AI class probabilities |
+| `hatexplain_model_ready_with_ai_labels.csv` | 20,148 | 13 | Streamlined version for modeling: post text, three human labels, human-majority, human-unanimous, AI hard label, and AI class probabilities |
 | `hatexplain_human_plus_mini.csv` | 20,148 | 27 | Comprehensive version with annotator IDs, target groups, token-level rationales, and raw AI probabilities |
 
 **Label classes**: `normal`, `offensive`, `hatespeech`
