@@ -108,7 +108,7 @@ All notebooks were developed and executed in [Google Colab](https://colab.resear
 
 > **Note**: Step 1 (AI annotation) requires an OpenAI API key. The pre-generated AI labels are already included in the datasets, so this step can be skipped if you only wish to reproduce the modeling and evaluation results.
 
-> **Reproducibility note**: Soft-label Panel B hard metrics (weighted F1, AUC) may exhibit minor numerical differences (≤ 0.006) due to stochastic bootstrap resampling across independent runs. All soft metrics (Soft CE, Brier) and all Panel A results reproduce exactly.
+> **Reproducibility note**: Soft-label Panel B hard metrics (weighted F1, AUC) may exhibit minor numerical differences due to stochastic bootstrap resampling across independent runs. All soft metrics (Soft CE, Brier) and all Panel A results reproduce exactly.
 
 ## Citation
 
