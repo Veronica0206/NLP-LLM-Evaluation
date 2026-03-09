@@ -56,7 +56,7 @@ This repository contains the data and code for reproducing all analyses in the p
 
 | File | Rows | Columns | Description |
 |------|------|---------|-------------|
-| `hatexplain_model_ready_with_ai_labels.csv` | 20,149 | 13 | Streamlined version for modeling: post text, three human labels, human-majority, human-unanimous, AI hard label, and AI class probabilities |
+| `hatexplain_model_ready_with_ai_labels.csv` | 20,148 | 13 | Streamlined version for modeling: post text, three human labels, human-majority, human-unanimous, AI hard label, and AI class probabilities |
 | `hatexplain_human_plus_mini.csv` | 20,148 | 27 | Comprehensive version with annotator IDs, target groups, token-level rationales, and raw AI probabilities |
 
 **Label classes**: `normal`, `offensive`, `hatespeech`
@@ -107,6 +107,8 @@ All notebooks were developed and executed in [Google Colab](https://colab.resear
 5. Each notebook is self-contained and includes its own train/validation/test split using a fixed random seed for reproducibility.
 
 > **Note**: Step 1 (AI annotation) requires an OpenAI API key. The pre-generated AI labels are already included in the datasets, so this step can be skipped if you only wish to reproduce the modeling and evaluation results.
+
+> **Reproducibility note**: Soft-label Panel B hard metrics (weighted F1, AUC) may exhibit minor numerical differences due to stochastic bootstrap resampling across independent runs. All soft metrics (Soft CE, Brier) and all Panel A results reproduce exactly.
 
 ## Citation
 
