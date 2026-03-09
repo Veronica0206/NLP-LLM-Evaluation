@@ -26,30 +26,30 @@ This repository contains the data and code for reproducing all analyses in the p
 ```
 .
 ├── 0. Dataset with 4omini Labels (2 sets)/
-│   ├── hatexplain_model_ready_with_ai_labels.csv   # Model-ready dataset (20,149 × 13)
-│   └── hatexplain_human_plus_mini.csv               # Full annotations with metadata (20,148 × 27)
+│   └── hatexplain_model_ready_with_ai_labels.csv        # Model-ready dataset (20,149 × 13)
+│   
 │
 ├── 1. Code for 4ominiLabelling/
-│   └── HateSpeech 4omini_Labeling.ipynb             # GPT-4o-mini batch annotation pipeline
+│   └── HateSpeech 4omini_Labeling.ipynb                 # GPT-4o-mini batch annotation pipeline
 │
 ├── 2. Code for Labels Comparision_human vs 4omini/
-│   ├── TwoSetsLabels.ipynb                          # Run-to-run AI consistency (Run 1 vs Run 2)
-│   └── HateSpeech overall_evaluation.ipynb           # Human-AI agreement, confusion matrices, entropy analysis
+│   ├── TwoSetsLabels.ipynb                              # Run-to-run AI consistency (Run 1 vs Run 2)
+│   └── HateSpeech overall_evaluation.ipynb              # Human-AI agreement, confusion matrices, entropy analysis
 │
 ├── 3. Hard Label Modeling_Primary Analysis/
-│   ├── T31_HateSpeech_human_pure_multiclass.ipynb    # Models trained on human-unanimous labels (n=9,845)
-│   ├── T32_HateSpeech_human_majority_multiclass.ipynb# Models trained on human-majority labels (n=19,229)
-│   └── T33_HateSpeech_4o_mini_multiclass.ipynb       # Models trained on AI labels (n=20,148)
+│   ├── T31_HateSpeech_human_pure_multiclass.ipynb       # Models trained on human-unanimous labels (n=9,845)
+│   ├── T32_HateSpeech_human_majority_multiclass.ipynb   # Models trained on human-majority labels (n=19,229)
+│   └── T33_HateSpeech_4o_mini_multiclass.ipynb          # Models trained on AI labels (n=20,148)
 │
 ├── 4. Hard Label Modeling_Supportive Analysis/
-│   ├── T41_HateSpeech_4o_mini_pure_multiclass.ipynb  # AI labels on human-unanimous subset (controlled)
+│   ├── T41_HateSpeech_4o_mini_pure_multiclass.ipynb     # AI labels on human-unanimous subset (controlled)
 │   └── T42_HateSpeech_4o_mini_majority_multiclass.ipynb # AI labels on human-majority subset (controlled)
 │
 └── 5. Soft Label Modeling/
-    ├── T51_HateSpeech_human_softtrain.ipynb          # ALBERT with human vote distributions
-    ├── T51_HateSpeech_4omini_softtrain.ipynb          # ALBERT with AI probability vectors
-    ├── T52_HateSpeech_human_softall.ipynb             # Full-data human soft labels
-    └── T52_HateSpeech_4omini_softall.ipynb            # Full-data AI soft labels
+    ├── T51_HateSpeech_human_softtrain.ipynb             # ALBERT with human vote distributions
+    ├── T51_HateSpeech_4omini_softtrain.ipynb            # ALBERT with AI probability vectors
+    ├── T52_HateSpeech_human_softall.ipynb               # Full-data human soft labels
+    └── T52_HateSpeech_4omini_softall.ipynb              # Full-data AI soft labels
 ```
 
 ## Dataset
@@ -57,7 +57,6 @@ This repository contains the data and code for reproducing all analyses in the p
 | File | Rows | Columns | Description |
 |------|------|---------|-------------|
 | `hatexplain_model_ready_with_ai_labels.csv` | 20,148 | 13 | Streamlined version for modeling: post text, three human labels, human-majority, human-unanimous, AI hard label, and AI class probabilities |
-| `hatexplain_human_plus_mini.csv` | 20,148 | 27 | Comprehensive version with annotator IDs, target groups, token-level rationales, and raw AI probabilities |
 
 **Label classes**: `normal`, `offensive`, `hatespeech`
 
