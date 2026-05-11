@@ -1,0 +1,51 @@
+# Manuscript 3: Learning to Fuse Aspect-Level LLM Annotations for Low-Quality Ordinal Sentiment Supervision
+
+This folder contains the Google Colab notebooks supporting the experiments described in the manuscript. The notebooks are organized by analysis stage.
+
+## Structure
+
+### 01_LLM_Labelling
+Rubric-guided LLM annotation of the Drug Review corpus using `gpt-4o-mini`, and post-hoc labelling analysis (entropy, class distributions, Jensen-Shannon distances).
+
+### 02_Aspect_Weight_Learning
+Multi-task transformer training (ALBERT, BioBERT) to estimate aspect-level fusion weights from efficacy, safety, burden, and cost classification heads.
+
+### 03_Hard_Label_Primary
+Primary five-class hard-label analysis comparing three supervision regimes (rating-derived, holistic LLM, aspect-derived) across downstream probes (LR, RF, LightGBM, GRU, CNN, ALBERT, BioBERT) under text-only and text-plus-metadata inputs.
+
+### 04_Hard_Label_Ablation
+Ablation analyses for five-class hard labels:
+- **DistMatch_Rating**: Distribution-matched rating-derived control (sample-weighted to match aspect-derived class distribution)
+- **Uniform_Weights**: Uniform 1:1:1:1 aspect weights
+- **Continuous_Weights**: Continuous learned weights (no integer rounding)
+- **Relaxed_Thresholds**: Alternative threshold mapping for extreme classes
+- **LOO_Efficacy / Safety / Burden / Cost**: Leave-one-aspect-out diagnostics
+- **Efficacy_Cost_Only**: Two highest-weight aspects retained
+
+### 05_Soft_Label_Primary
+Primary three-class soft-label analysis using learned 2:1:1:2 aspect-vote distributions:
+- **SoftTrain_HardTest**: Soft-label training with hard three-class validation/test
+- **FullSoft**: Full soft-label training, validation, and test evaluation
+
+### 06_Soft_Label_Ablation
+Soft-label ablation analyses:
+- **Hard_3Class_Baseline**: Hard three-class polarity labels (collapsed from five-class aspect-derived)
+- **Soft_1111_SoftTrain_HardTest**: Uniform 1:1:1:1 soft-label training with hard test
+- **Soft_1111_FullSoft**: Uniform 1:1:1:1 full soft-label evaluation
+
+## Naming Convention
+
+Each notebook is named as:
+```
+DrugReview_[Experiment]_[text_only | text_meta].ipynb
+```
+- `text_only`: Review text as sole input
+- `text_meta`: Review text concatenated with drug name and condition metadata
+
+## Data
+
+The experiments use the [Drug Review Dataset](https://archive.ics.uci.edu/dataset/462/drug+review+dataset+drugs+com) from the UCI Machine Learning Repository. The preprocessed and LLM-annotated dataset is available as described in the notebooks.
+
+## Computational Environment
+
+All notebooks were executed in Google Colab. CPU runtime was used for classical ML models; GPU runtime (NVIDIA H100/A100/G4) was used for deep learning and transformer fine-tuning.
