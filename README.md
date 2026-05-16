@@ -1,6 +1,6 @@
 # NLP-LLM-Evaluation
 
-Research papers and reproducible code evaluating LLM performance on natural language tasks.
+Research manuscripts and reproducible code evaluating LLM performance on natural language tasks.
 
 This repository collects a series of studies that systematically assess how large language models perform when applied to core NLP tasks — annotation, classification, and text understanding — across diverse content domains. Each manuscript directory is self-contained with data, code, and documentation for full reproducibility.
 
