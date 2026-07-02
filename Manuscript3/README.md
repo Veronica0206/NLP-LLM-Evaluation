@@ -52,4 +52,4 @@ All notebooks were executed in Google Colab. CPU runtime was used for classical 
 
 ## License
 
-Released under the repository's [MIT License](../LICENSE).
+Released under the repository's [GNU General Public License v3.0](../LICENSE).

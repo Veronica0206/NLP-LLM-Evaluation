@@ -58,4 +58,4 @@ Please cite individual papers using the BibTeX entries provided in each manuscri
 
 ## License
 
-Individual manuscripts may carry their own licenses. See each directory for details.
+This repository is released under the GNU General Public License v3.0. Dataset sources may carry their own terms; see each manuscript directory for data-specific notes.

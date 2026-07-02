@@ -122,6 +122,6 @@ If you use this code or data in your work, please cite:
 
 ## License
 
-This project is released under the [MIT License](LICENSE).
+This project is released under the repository's [GNU General Public License v3.0](../LICENSE).
 
 The HateXplain dataset is subject to its own license terms; see the [original repository](https://github.com/hate-alert/HateXplain) for details.
