@@ -1,0 +1,20 @@
+# Core dependencies for the analysis notebooks.
+# All notebooks were developed and executed on Google Colab (Python 3.12);
+# unpinned packages ran with the Colab-provided versions at execution time.
+numpy
+pandas
+scipy
+scikit-learn
+statsmodels
+matplotlib
+seaborn
+tqdm
+nltk
+wordcloud
+imbalanced-learn
+lightgbm
+torch
+transformers==4.41.1
+peft==0.13.2
+openai
+joblib
