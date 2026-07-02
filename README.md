@@ -5,7 +5,7 @@
 
 Research manuscripts and reproducible code evaluating LLM performance on natural language tasks.
 
-This repository collects studies on LLM annotation, NLP supervision quality, uncertainty, and downstream modeling. Each manuscript directory is self-contained with data, code, and documentation for reproducibility, while this top-level README is organized as a quick portfolio map for AI evaluation, model reliability, and NLP research roles.
+This repository collects studies on LLM annotation, NLP supervision quality, uncertainty, and downstream modeling. Each manuscript directory is self-contained with code and documentation for reproducibility (Manuscript 1 additionally includes its model-ready dataset), while this top-level README is organized as a quick portfolio map for AI evaluation, model reliability, and NLP research roles.
 
 ## AI evaluation lens
 
@@ -45,6 +45,8 @@ This repo demonstrates hands-on LLM evaluation and reproducible NLP experimentat
 |---|---|---|---|---|
 | 1 | Rubric-Conditioned Large Language Model Labeling: Agreement, Uncertainty, and Label Consistency in Subjective Text Annotation | Hate Speech | Accepted, *Computers in Human Behavior* | [`Manuscript1/`](Manuscript1/) |
 | 3 | Learning to Fuse Aspect-Level LLM Annotations for Low-Quality Ordinal Sentiment Supervision | Patient medication reviews | Experimental manuscript folder with reproducible notebooks | [`Manuscript3/`](Manuscript3/) |
+
+Manuscript numbering follows the author's internal research series; manuscripts not listed here are not yet public.
 
 ## How to use
 
