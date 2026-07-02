@@ -15,7 +15,7 @@ This repository contains the data and code for reproducing all analyses in the p
 - **Human-level agreement**: LLM-unanimous concordance (Cohen's kappa = 0.434) approaches mean human-human agreement (kappa = 0.460).
 - **Protocol stability**: Two identical labeling runs agree on 93.0% of items (kappa = 0.882).
 - **More learnable supervision**: LLM-generated labels yield higher downstream performance than majority-vote human labels, interpreted as greater internal consistency.
-- **Entropy as triage signal**: Normalized Shannon entropy of LLM probability vectors predicts human-AI disagreement (OR = 4.79), supporting entropy-guided human review in hybrid workflows.
+- **Entropy as triage signal**: Shannon entropy of LLM probability vectors predicts human-AI disagreement (OR = 4.79), supporting entropy-guided human review in hybrid workflows.
 - **Soft-label advantage**: Training ALBERT on AI probability vectors outperforms training on human vote distributions under both hard-evaluation and soft-evaluation protocols.
 
 ## Repository Structure
