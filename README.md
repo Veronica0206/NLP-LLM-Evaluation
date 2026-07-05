@@ -20,6 +20,7 @@ This repo demonstrates hands-on LLM evaluation and reproducible NLP experimentat
 | Manuscript folder | Research question | Data/task | Evaluation methods | Modeling methods | What it demonstrates for AI evaluation roles |
 |---|---|---|---|---|---|
 | [`Manuscript1/`](Manuscript1/) | How reliable is rubric-conditioned GPT-4o-mini labeling for subjective hate-speech annotation, and how useful are AI labels for downstream learning? | HateXplain social-media posts with three-level labels: `normal`, `offensive`, `hatespeech`. | Human-AI agreement, Cohen's kappa, run-to-run LLM consistency, confusion matrices, entropy as a disagreement signal, hard-label and soft-label evaluation. | Classical and transformer-based downstream modeling, including ALBERT soft-label experiments and hard-label supervision comparisons. | LLM-as-annotator evaluation, rubric-conditioned prompting, uncertainty triage, label-quality analysis, and reproducible annotation-to-modeling workflow design. |
+| [`Manuscript2/`](Manuscript2/) | How can LLM-based annotation be evaluated as multi-view supervision for affective text classification? | Post hoc-harmonized seven-class affective-state text corpus with released labels, LLM hard labels, score vectors, and aspect-level annotations. | Label-space overlap, entropy and score-dispersion diagnostics, affective co-occurrence analysis, human-validation audit, paired revision tests, and multi-LLM robustness summaries. | Hard-label classifiers, soft-label transformer training, and multi-task aspect modeling for co-occurring affective evidence. | Multi-view LLM supervision evaluation, uncertainty-aware routing, score-vector diagnostics, human-audit validation, and reproducible revision robustness analysis. |
 | [`Manuscript3/`](Manuscript3/) | Can aspect-level LLM annotations be fused into better ordinal sentiment supervision for patient medication reviews? | Drug Review corpus with review text, drug/condition metadata, holistic labels, and aspect-level annotations for efficacy, safety, burden, and cost. | Entropy analysis, class distributions, Jensen-Shannon distances, ablations, leave-one-aspect-out diagnostics, and hard/soft supervision comparisons. | Aspect-weight learning with ALBERT and BioBERT, plus downstream probes including LR, RF, LightGBM, GRU, CNN, ALBERT, and BioBERT under text-only and text-plus-metadata inputs. | Aspect-level LLM annotation design, label-fusion evaluation, soft-label learning, ablation-based failure analysis, and patient-text NLP modeling. |
 
 ## Core capabilities demonstrated
@@ -36,14 +37,16 @@ This repo demonstrates hands-on LLM evaluation and reproducible NLP experimentat
 
 1. Start with this README overview to see the portfolio structure.
 2. Review [`Manuscript1/`](Manuscript1/) for hate-speech LLM annotation evaluation, agreement, entropy, and hard/soft supervision.
-3. Review [`Manuscript3/`](Manuscript3/) for patient medication review annotation, aspect-level fusion, and downstream model comparisons.
-4. Open the notebooks in each manuscript folder for implementation details, model training, and analysis outputs.
+3. Review [`Manuscript2/`](Manuscript2/) for affective-state annotation, entropy diagnostics, multi-view supervision, and revision robustness analyses.
+4. Review [`Manuscript3/`](Manuscript3/) for patient medication review annotation, aspect-level fusion, and downstream model comparisons.
+5. Open the notebooks in each manuscript folder for implementation details, model training, and analysis outputs.
 
 ## Manuscripts
 
 | # | Title | Domain | Status | Directory |
 |---|---|---|---|---|
 | 1 | Rubric-Conditioned Large Language Model Labeling: Agreement, Uncertainty, and Label Consistency in Subjective Text Annotation | Hate Speech | Accepted, *Computers in Human Behavior* | [`Manuscript1/`](Manuscript1/) |
+| 2 | LLM-Based Annotation for Affective Text Classification: Label-Space Overlap, Multi-View Supervision, and Entropy Diagnostics | Affective-state text classification | Revision-stage manuscript folder with reproducible notebooks | [`Manuscript2/`](Manuscript2/) |
 | 3 | Learning to Fuse Aspect-Level LLM Annotations for Low-Quality Ordinal Sentiment Supervision | Patient medication reviews | Experimental manuscript folder with reproducible notebooks | [`Manuscript3/`](Manuscript3/) |
 
 Manuscript numbering follows the author's internal research series; manuscripts not listed here are not yet public.

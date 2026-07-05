@@ -1,0 +1,26 @@
+# Local data and generated outputs
+data/
+outputs/
+*.csv
+*.tsv
+*.xlsx
+*.xlsm
+*.json
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.pth
+*.pt
+*.joblib
+*.pkl
+
+# Python/Jupyter local state
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# System/editor files
+.DS_Store
+*.swp
