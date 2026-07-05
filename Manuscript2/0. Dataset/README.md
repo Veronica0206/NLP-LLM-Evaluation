@@ -3,7 +3,6 @@
 Data materials are shared separately through OSF.
 
 - DOI: [10.17605/OSF.IO/YQ9TZ](https://doi.org/10.17605/OSF.IO/YQ9TZ)
-- OSF landing page: https://osf.io/yq9tz/overview?view_only=c3805375590e4873b907671df16fc4b5
 
 Place the downloaded OSF data package in this folder, or update the path configuration cells in each notebook to point to the downloaded data location.
 

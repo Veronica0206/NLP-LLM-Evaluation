@@ -44,7 +44,6 @@ MentalHealth_[Analysis_or_Modeling_Task].ipynb
 The analysis-ready data package is shared separately through OSF.
 
 - DOI: [10.17605/OSF.IO/YQ9TZ](https://doi.org/10.17605/OSF.IO/YQ9TZ)
-- OSF landing page: https://osf.io/yq9tz/overview?view_only=c3805375590e4873b907671df16fc4b5
 
 Place the downloaded files under `0. Dataset/` or update notebook path configuration cells before running the notebooks. This repository does not store raw or derived data files, standalone generated outputs, model checkpoints, API keys, or private credentials.
 
