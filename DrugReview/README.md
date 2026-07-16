@@ -15,13 +15,14 @@ coherent **Mood/Anxiety** cohort and a **Heterogeneous**-indication cohort.
 |---|---|
 | `A0_Cohort_Construction` | Builds the two study cohorts from the raw UCI Drug Review corpus: concatenates the original train/test files, cleans and bins the 10-point rating into five ordinal classes, selects the Mood/Anxiety cohort by the prespecified condition list, and constructs the size-matched Heterogeneous cohort. |
 
-### Label diagnostics: agreement, uncertainty, calibration, duplicates (A1–A4)
+### Label diagnostics: agreement, uncertainty, duplicates (A1–A4)
 
 Rating-derived vs. rubric-guided `gpt-4o-mini` label analysis for each cohort ×
 annotation regime: exact/ordinal agreement (accuracy, QWK, macro/weighted F1, JS
 distance), soft-label diagnostics (E[p(y)], NLL, Brier, E[|Δ_ord|]), normalized-entropy
-stratification, ECE/MCE calibration, the disagreement logistic regressions, and the
-deduplicated (unique-review) sensitivity check.
+stratification, the disagreement logistic regressions, and the deduplicated
+(unique-review) sensitivity check. Calibration (ECE/MCE, Fig. S1) is reproduced separately
+in `A5_Calibration`.
 
 | Notebook | Cohort | Annotation regime |
 |---|---|---|
@@ -29,6 +30,12 @@ deduplicated (unique-review) sensitivity check.
 | `A2_Label_Diagnostics_MoodAnxiety_TextMetadata` | Mood/Anxiety | Text+metadata |
 | `A3_Label_Diagnostics_Heterogeneous_TextOnly` | Heterogeneous | Text-only |
 | `A4_Label_Diagnostics_Heterogeneous_TextMetadata` | Heterogeneous | Text+metadata |
+
+### Calibration (A5)
+
+| Notebook | Purpose |
+|---|---|
+| `A5_Calibration` | Reproduces the calibration results (Supplementary Table S4 and Figure S1): expected and maximum calibration error (ECE/MCE) over **15 equal-width bins** of `p_max`, for (A) the `gpt-4o-mini` annotator scored against rating-derived agreement across the four cohort × annotation regimes, and (B) the downstream ALBERT probe scored against its panel target across the six label panels. Emits the two-panel reliability diagram (`fig_calibration.pdf`). |
 
 ### Downstream learnability probes (T11–T43)
 
@@ -72,7 +79,8 @@ safety aspects, across the two cohorts with and without metadata inputs.
 | Dataset & cohort construction; duplicate counts (Dataset Characteristics) | `A0` |
 | Table I — hard-label agreement & ordinal diagnostics | `A1`–`A4` (one column each) |
 | Table II — agreement by normalized entropy | `A1`–`A4` |
-| Soft-label diagnostics; calibration ECE/MCE (Suppl. Table S4, Fig. S1); disagreement logistic regressions | `A1`–`A4` |
+| Soft-label diagnostics; disagreement logistic regressions | `A1`–`A4` |
+| Calibration ECE/MCE (Suppl. Table S4, Fig. S1) | `A5` |
 | Table VI — deduplicated (unique-review) sensitivity | `A1`–`A4` |
 | Table III — downstream probes, Mood/Anxiety, text-only prediction, Panels A/B/C | `T11` / `T12` / `T13` |
 | Table IV — downstream probes, Heterogeneous, text-only prediction, Panels A/B/C | `T21` / `T22` / `T23` |
@@ -109,6 +117,8 @@ input from a path under `./data/`. Expected input filenames:
 | `A0` | `drugsComTrain_raw.csv`, `drugsComTest_raw.csv` |
 | `A1` / `A3` | `PureText/drugsCom_{mood_anxiety,generalized}_with_ai_labels_mini.csv` |
 | `A2` / `A4` | `Text_Metadata/drugsCom_{mood_anxiety,generalized}_with_ai_labels_mini.csv` |
+| `A5` (Panel A) | `PureText/` and `Text_Metadata/drugsCom_{mood_anxiety,generalized}_with_ai_labels_mini.csv` |
+| `A5` (Panel B) | `predictions/{mood,het}_{rating,ai_to,ai_tm}_dl_models_predictions.csv` (ALBERT held-out test predictions exported by `T11`–`T23`) |
 | `T11`–`T43` | `drugreview_{mood_anxiety,heterogeneous}_labeled.csv` |
 | `T51`–`T54` | `drugsCom_{mood_anxiety,generalized}_with_ai_labels_mini.csv` |
 
