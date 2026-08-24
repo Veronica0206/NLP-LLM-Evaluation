@@ -1,4 +1,0 @@
-comparison,n_cells,exact_strength_agreement_pct,binary_presence_agreement_pct,exact_strength_agreement_n,binary_presence_agreement_n
-Annotator 1 vs. Annotator 2,1800,77.2,81.7,1389,1471
-Annotator 1 vs. AI aspects,1800,75.2,81.7,1354,1470
-Annotator 2 vs. AI aspects,1800,72.6,79.8,1306,1437

@@ -27,9 +27,9 @@ tested CPU analyses only; it is not an original GPU/Colab lock file.
 | Six R2 modeling notebooks | Public code records training seed 2025, grouped-split constants, model settings, selected output paths, and safe executed result outputs from the reported reruns. Raw post previews and private setup outputs are cleared. |
 | Modeling devices | Internal run provenance recorded CPU for hard-label Panels A and C, and CUDA for Panel B, both soft-label workflows, and the six-head aspect workflow. These are provenance notes, not public executed output. |
 | Transformer checkpoints | Public code identifies `albert-base-v2` and `dmis-lab/biobert-v1.1`. |
-| Selected model settings | Public JSON files under the three modeling stages preserve the chosen hyperparameters. |
+| Selected model settings | The chosen hyperparameters are printed directly in the executed outputs of the six R2 modeling notebooks. |
 | Full-corpus annotation | Public code records the `gpt-4o-mini` model name; the external archived data retain system fingerprints and timestamps. |
-| Revision CPU analyses | Public `expected_outputs/` files preserve statement-free aggregates and manifests; the multi-LLM manifest records Python and core numerical-library versions. |
+| Revision CPU analyses | Public scripts document the analysis settings and write regenerated results to local, untracked output directories. |
 
 ## Original GPU environment boundary
 

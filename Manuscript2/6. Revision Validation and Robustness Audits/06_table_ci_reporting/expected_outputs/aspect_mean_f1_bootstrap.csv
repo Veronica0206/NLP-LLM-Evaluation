@@ -1,5 +1,0 @@
-model,metric,estimate,ci_low,ci_high,confidence_level,bootstrap_resamples,bootstrap_seed,bootstrap_unit,n_test_posts
-albert,mean_weighted_f1_across_six_heads,0.8627493709459902,0.8598509758584183,0.8652917799131838,0.95,1000,2025,held-out test post shared across six heads,10550
-albert,mean_macro_f1_across_six_heads,0.5930956981981786,0.5858669386444452,0.6009895664706567,0.95,1000,2025,held-out test post shared across six heads,10550
-biobert,mean_weighted_f1_across_six_heads,0.8572601780885954,0.8543053856998171,0.8599310143616351,0.95,1000,2025,held-out test post shared across six heads,10550
-biobert,mean_macro_f1_across_six_heads,0.5890963447771523,0.5819605579953301,0.5967709879287788,0.95,1000,2025,held-out test post shared across six heads,10550

@@ -27,6 +27,5 @@ human-audit analyses require their corresponding external inputs.
 
 Raw human-audit workbooks and other files containing restricted post text are
 not stored in GitHub. Availability of any statement-free derivative is governed
-by the external package manifest. The repository's aggregate
-`expected_outputs/` files are verification targets, not substitutes for the
-row-level inputs required to rerun an analysis.
+by the external package manifest. Generated standalone outputs are not bundled
+in this repository and should remain in ignored local output directories.

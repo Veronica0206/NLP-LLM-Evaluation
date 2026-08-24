@@ -1,7 +1,0 @@
-measure,aggregation,model_a,model_b,n_aspect_pairs,spearman_rho,p_value,rho_ci_low,rho_ci_high,mean_absolute_rate_difference,maximum_absolute_rate_difference
-fifteen_aspect_pair_joint_present_rates,pooled_across_100_items_and_54_conditions,gemini-2.5-flash,gpt-4o-mini,15,0.8357142857142855,0.00010444687327713353,0.7678571428571428,0.9383381762961647,0.05448148148148148,0.18092592592592596
-fifteen_aspect_pair_joint_present_rates,pooled_across_100_items_and_54_conditions,gemini-2.5-flash,llama-70b,15,0.8663764240260166,2.947517647953614e-05,0.7917340069424638,0.9526366627921061,0.043962962962962975,0.16444444444444453
-fifteen_aspect_pair_joint_present_rates,pooled_across_100_items_and_54_conditions,gemini-2.5-flash,mistral-small,15,0.9035714285714285,3.880504128799775e-06,0.8489090340898308,0.9714285714285713,0.029123456790123455,0.10925925925925928
-fifteen_aspect_pair_joint_present_rates,pooled_across_100_items_and_54_conditions,gpt-4o-mini,llama-70b,15,0.9237761042927505,8.84702109646764e-07,0.8674997482398173,0.9776590141600039,0.014024691358024689,0.04833333333333331
-fifteen_aspect_pair_joint_present_rates,pooled_across_100_items_and_54_conditions,gpt-4o-mini,mistral-small,15,0.9214285714285713,1.0713172981620745e-06,0.8392785267058522,0.9785714285714284,0.028222222222222225,0.10870370370370372
-fifteen_aspect_pair_joint_present_rates,pooled_across_100_items_and_54_conditions,llama-70b,mistral-small,15,0.9793820445511491,2.062942465686992e-10,0.907142857142857,0.9928379185847258,0.01824691358024692,0.06222222222222218

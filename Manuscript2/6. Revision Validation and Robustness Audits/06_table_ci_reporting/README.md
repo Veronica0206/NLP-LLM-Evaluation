@@ -14,6 +14,5 @@ python3 "6. Revision Validation and Robustness Audits/06_table_ci_reporting/comp
 ```
 
 The row-level prediction file is external and is not stored in GitHub. The
-script uses 1,000 percentile-bootstrap resamples and seed 2025. The
-statement-free result in `expected_outputs/` is the aggregate verification
-target.
+script uses 1,000 percentile-bootstrap resamples and seed 2025. Its generated
+CSV should remain in the untracked local `outputs/` directory.

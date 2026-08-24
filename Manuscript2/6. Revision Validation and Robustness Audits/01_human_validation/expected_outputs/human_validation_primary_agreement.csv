@@ -1,7 +1,0 @@
-comparison,exact_agreement,agreement_n,n,agreement_pct,cohen_kappa
-Annotator 1 vs. Annotator 2,169/300,169,300,56.3,0.489
-Annotator 1 vs. AI label,155/300,155,300,51.7,0.436
-Annotator 2 vs. AI label,164/300,164,300,54.7,0.462
-Annotator 1 vs. released label,158/300,158,300,52.7,0.449
-Annotator 2 vs. released label,145/300,145,300,48.3,0.401
-AI label vs. released label,138/300,138,300,46.0,0.373

@@ -13,8 +13,8 @@ python3 "6. Revision Validation and Robustness Audits/01_human_validation/comput
 
 The external audit matrix contains only sample IDs and released, AI, and human
 labels; it contains no post text. Raw returned workbooks remain restricted and
-must not be committed. The CSVs and manifest in `expected_outputs/` are
-aggregate reference outputs for verification; they are not the audit input.
+must not be committed. Generated CSVs and manifests should remain in the
+untracked local `outputs/` directory.
 
 The audit used two independent, label-blinded non-expert annotators and a
 deliberately enriched 300-post sample. Its results characterize agreement and

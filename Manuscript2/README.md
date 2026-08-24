@@ -1,6 +1,6 @@
 # Manuscript 2: LLM-Based Annotation for Affective Text Classification
 
-This directory contains the R2 code and public, statement-free evidence for the
+This directory contains the R2 code and sanitized public notebooks for the
 manuscript's annotation, characterization, downstream-modeling, human-audit,
 entropy-routing, and multi-LLM robustness analyses.
 
@@ -12,11 +12,8 @@ continue to work. The modeling notebooks now reflect the R2 analysis settings.
 - Sanitized notebooks documenting the annotation and analysis workflows.
 - The six R2 downstream-modeling notebooks for hard labels, soft labels, and
   six aspect heads, including their safe executed result outputs.
-- Selected-hyperparameter JSON files for every reported modeling branch.
 - CPU scripts for entropy routing, multi-LLM robustness, aspect mean-F1
   intervals, and chance-corrected human aspect agreement.
-- Statement-free aggregate outputs and analysis manifests under
-  `expected_outputs/` in the revision-audit folders.
 - An [environment record](ENVIRONMENT.md) and a
   [table/figure reproduction index](REPRODUCIBILITY_INDEX.md).
 
@@ -32,8 +29,8 @@ The accompanying data package is available through OSF:
 
 - DOI: [10.17605/OSF.IO/YQ9TZ](https://doi.org/10.17605/OSF.IO/YQ9TZ)
 
-GitHub therefore provides code, configurations, and safe aggregate evidence;
-the external package is the source for inputs that can be redistributed.
+GitHub therefore provides code, configurations, and safe executed-notebook
+evidence; the external package is the source for inputs that can be redistributed.
 Restricted inputs remain outside the public release, so GitHub alone is not a
 complete data bundle. See the
 [dataset instructions](0.%20Dataset/README.md) for the expected local layout.
@@ -45,9 +42,9 @@ complete data bundle. See the
 | `0. Dataset/` | External-package DOI and local input-layout guidance. |
 | `1. Code for LLM Annotation/` | Sanitized `gpt-4o-mini` prompt, JSON schema, parsing, retry, and checkpoint protocol. |
 | `2. Code for Label Comparison and Entropy/` | Released-versus-AI agreement, entropy, score dispersion, and affective co-occurrence analyses. |
-| `3. Hard Label Modeling/` | R2 released-label, AI-hard-label, and agreement-subset models plus selected hyperparameters. |
-| `4. Soft Label Modeling/` | R2 soft-train and full soft-label transformer workflows plus selected hyperparameters. |
-| `5. Multi-Task Aspect Modeling/` | R2 six-head aspect models plus selected hyperparameters. |
+| `3. Hard Label Modeling/` | R2 released-label, AI-hard-label, and agreement-subset models. |
+| `4. Soft Label Modeling/` | R2 soft-train and full soft-label transformer workflows. |
+| `5. Multi-Task Aspect Modeling/` | R2 six-head aspect models. |
 | `6. Revision Validation and Robustness Audits/` | Human audit, routing baselines and review-budget curves, multi-LLM analyses, and bootstrap intervals. |
 
 ## Reproduction workflow
@@ -61,9 +58,8 @@ complete data bundle. See the
    stages. GPU access is recommended for transformer training.
 4. Use the scripts in `6. Revision Validation and Robustness Audits/` for the
    CPU-only R2 analyses.
-5. Compare regenerated aggregate files with the corresponding
-   `expected_outputs/` files. Consult `REPRODUCIBILITY_INDEX.md` for the exact
-   artifact-to-code map.
+5. Keep regenerated standalone files under an untracked local `outputs/`
+   directory. Consult `REPRODUCIBILITY_INDEX.md` for the artifact-to-code map.
 
 The API annotation notebook is a source-protocol record. Pre-generated,
 permitted annotation inputs are used by the downstream analyses, so reproducing

@@ -1,4 +1,0 @@
-comparison,exact_strength_agreement,binary_presence_agreement
-Annotator 1 vs. Annotator 2,77.2%,81.7%
-Annotator 1 vs. AI aspects,75.2%,81.7%
-Annotator 2 vs. AI aspects,72.6%,79.8%

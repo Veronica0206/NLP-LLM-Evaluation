@@ -15,11 +15,6 @@ outputs/
 *.joblib
 *.pkl
 
-# Versioned, aggregate-only R2 release artifacts
-!**/selected_hyperparameters/**/*.json
-!6. Revision Validation and Robustness Audits/**/expected_outputs/*.csv
-!6. Revision Validation and Robustness Audits/**/expected_outputs/*.json
-
 # Python/Jupyter local state
 __pycache__/
 .ipynb_checkpoints/

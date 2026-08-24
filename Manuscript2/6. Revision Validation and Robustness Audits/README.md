@@ -17,19 +17,15 @@ Existing notebook filenames are retained to preserve earlier public URLs.
 | `05_multillm_documentation/analyze_multillm_documentation.py` | Sample characterization, factor summaries, and cross-LLM hard-label, entropy, aspect-count, co-occurrence, prevalence, and strength robustness. | External full corpus and crossed multi-LLM output. |
 | `06_table_ci_reporting/compute_aspect_mean_f1_ci.py` | Post-cluster bootstrap interval for the Table 4 mean F1 across six aspect heads. | External saved aspect predictions. |
 
-Each scripted analysis has a statement-free `expected_outputs/` directory.
-Those files are verification targets for aggregate results, not the row-level
-inputs required to run the scripts.
-
 ## Running the scripts
 
 Install the tested CPU dependencies from `../requirements-cpu.txt`, then run
 the scripts from the `Manuscript2/` directory. Exact commands and input
 boundaries are documented in each analysis subfolder.
 
-Write regenerated files under an untracked `outputs/` directory and compare
-the statement-free aggregates with the matching `expected_outputs/` files. Do
-not commit corpus rows, post text, human-audit workbooks, or row-level outputs.
+Write regenerated files under an untracked `outputs/` directory. Do not commit
+generated result files, corpus rows, post text, human-audit workbooks, or
+row-level outputs.
 
 ## Analysis boundaries
 

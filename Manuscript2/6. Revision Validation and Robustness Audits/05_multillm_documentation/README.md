@@ -20,7 +20,7 @@ crossed design and schema, and exports the sample, factor, agreement, entropy,
 aspect-count, co-occurrence, prevalence, and strength summaries used in Tables
 S6-S8.
 
-`expected_outputs/` contains statement-free aggregate CSVs and the validation
-manifest. It does not contain the 100 sampled posts or 21,600-row crossed input.
-Binary aspect presence supports presence/co-occurrence analyses; the original
-NONE/WEAK/CLEAR ratings are analyzed separately for ordinal reproducibility.
+Generated aggregate CSVs and the validation manifest should remain in the
+untracked local `outputs/` directory. Binary aspect presence supports
+presence/co-occurrence analyses; the original NONE/WEAK/CLEAR ratings are
+analyzed separately for ordinal reproducibility.

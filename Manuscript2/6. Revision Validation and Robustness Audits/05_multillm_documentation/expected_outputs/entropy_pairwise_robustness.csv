@@ -1,7 +1,0 @@
-measure,aggregation,model_a,model_b,n_items,spearman_rho,p_value,rho_ci_low,rho_ci_high
-normalized_score_entropy,item_mean_across_54_conditions,gemini-2.5-flash,gpt-4o-mini,100,0.6491947728917804,2.7646017289233195e-13,0.5011788829495933,0.7575656051048772
-normalized_score_entropy,item_mean_across_54_conditions,gemini-2.5-flash,llama-70b,100,0.6931600648827443,1.332578232710637e-15,0.5664304360277405,0.7817530396784721
-normalized_score_entropy,item_mean_across_54_conditions,gemini-2.5-flash,mistral-small,100,0.6850108313890887,3.8437559922203254e-15,0.541511752955887,0.7755904238270696
-normalized_score_entropy,item_mean_across_54_conditions,gpt-4o-mini,llama-70b,100,0.7891606589290251,1.815137291560663e-22,0.6805720997591527,0.8633734921583897
-normalized_score_entropy,item_mean_across_54_conditions,gpt-4o-mini,mistral-small,100,0.7923184296466285,9.410742318754017e-23,0.6983357644422878,0.8569066223063826
-normalized_score_entropy,item_mean_across_54_conditions,llama-70b,mistral-small,100,0.7853182280025648,3.9768935860587483e-22,0.6607492301569753,0.8669274716518695
