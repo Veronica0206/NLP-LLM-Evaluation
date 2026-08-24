@@ -1,31 +1,21 @@
-# External data inputs
+# Dataset
 
-Data inputs are distributed separately from GitHub.
+Data materials are shared separately through OSF.
 
-- OSF DOI: [10.17605/OSF.IO/YQ9TZ](https://doi.org/10.17605/OSF.IO/YQ9TZ)
+- DOI: [10.17605/OSF.IO/YQ9TZ](https://doi.org/10.17605/OSF.IO/YQ9TZ)
 
-Download the permitted files and place them in this directory, or provide their
-paths through the public notebook configuration cells and script arguments.
-The external package manifest is authoritative for exact filenames and
-redistribution status.
+Place the downloaded OSF data package in this folder, or update the path configuration cells in each notebook to point to the downloaded data location.
 
-Suggested local layout:
+This GitHub repository intentionally does not store data files, generated outputs, model checkpoints, or figures.
+
+Suggested local layout after downloading the OSF package:
 
 ```text
 0. Dataset/
-├── analysis_ready/          # full-corpus analysis input
-├── modeling_outputs/        # saved predictions/splits, when distributed
-├── human_audit/             # human_validation_aspect_matrix_300.csv
-├── multi_llm/               # crossed multi-LLM analysis input
-└── labeling/                # permitted annotation-stage files
+├── analysis_ready/
+├── existing_data_analyses/
+├── human_validation_300/
+└── labeling/
 ```
 
-The main full-corpus analyses expect an analysis-ready file containing the
-released label, AI hard label, seven score columns, six aspect fields, and the
-grouping text/key used to create leakage-controlled splits. The multi-LLM and
-human-audit analyses require their corresponding external inputs.
-
-Raw human-audit workbooks and other files containing restricted post text are
-not stored in GitHub. Availability of any statement-free derivative is governed
-by the external package manifest. Generated standalone outputs are not bundled
-in this repository and should remain in ignored local output directories.
+Exact file names should follow the OSF data package.

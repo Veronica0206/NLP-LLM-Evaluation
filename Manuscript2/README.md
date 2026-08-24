@@ -1,87 +1,60 @@
 # Manuscript 2: LLM-Based Annotation for Affective Text Classification
 
-This directory contains the R2 code and sanitized public notebooks for the
-manuscript's annotation, characterization, downstream-modeling, human-audit,
-entropy-routing, and multi-LLM robustness analyses.
+This folder contains the Google Colab notebooks supporting the experiments described in the manuscript. The notebooks are organized by analysis stage and retain executed cell outputs for transparency.
 
-The existing public notebook names have been retained so earlier GitHub links
-continue to work. The modeling notebooks now reflect the R2 analysis settings.
+## Structure
 
-## What is included
+### 0. Dataset
+OSF data-package notes and local data-layout guidance. The analysis-ready data files are shared separately through OSF and are not stored in this repository.
 
-- Sanitized notebooks documenting the annotation and analysis workflows.
-- The six R2 downstream-modeling notebooks for hard labels, soft labels, and
-  six aspect heads, including their safe executed result outputs.
-- CPU scripts for entropy routing, multi-LLM robustness, aspect mean-F1
-  intervals, and chance-corrected human aspect agreement.
-- An [environment record](ENVIRONMENT.md) and a
-  [table/figure reproduction index](REPRODUCIBILITY_INDEX.md).
+### 1. Code for LLM Annotation
+Sanitized rubric-guided LLM annotation protocol using `gpt-4o-mini`, including the prompt, JSON output schema, model settings, retry/checkpoint logic, and post-processing steps. Private credential-check lines and local metadata were removed; cell outputs are retained.
 
-## What is not included
+### 2. Code for Label Comparison and Entropy
+Released-label versus LLM-label concordance analysis, score-vector entropy diagnostics, score dispersion summaries, and affective co-occurrence checks.
 
-The GitHub repository does not contain corpus rows, post text, row-level model
-predictions, human-audit workbooks, the crossed multi-LLM output, model
-checkpoints, API credentials, or private local metadata. These materials are
-either supplied separately through the external data package or are restricted
-from redistribution.
+### 3. Hard Label Modeling
+Primary hard-label downstream modeling comparing released-label, LLM-label, and agreement-subset supervision regimes across multiclass classifiers.
 
-The accompanying data package is available through OSF:
+### 4. Soft Label Modeling
+Soft-label transformer training and evaluation using LLM score-vector targets, including soft-train/hard-test and full soft-label evaluation workflows.
+
+### 5. Multi-Task Aspect Modeling
+Six-head aspect-level modeling for co-occurring affective evidence and aspect-level supervision diagnostics.
+
+### 6. Revision Validation and Robustness Audits
+R1 revision analyses, paired tests, entropy routing summaries, class-wise aspect metrics, human-validation audit tables, Supplementary Table S2 generation, and multi-LLM robustness summaries.
+
+## Naming Convention
+
+Notebook names follow the analysis stage and task:
+
+```text
+MentalHealth_[Analysis_or_Modeling_Task].ipynb
+```
+
+- `MentalHealth_4omini_Labeling.ipynb`: LLM annotation protocol and output-schema documentation
+- `Original_AI_Labels_Exploration.ipynb`: released-label versus LLM-label comparison and entropy diagnostics
+- `MentalHealth_*_multiclass.ipynb`: hard-label multiclass modeling notebooks
+- `MentalHealth_4omini_Soft*.ipynb`: soft-label modeling notebooks
+- `MentalHealth_R1_*.ipynb`: revision validation and robustness audit notebooks
+
+## Data
+
+The analysis-ready data package is shared separately through OSF.
 
 - DOI: [10.17605/OSF.IO/YQ9TZ](https://doi.org/10.17605/OSF.IO/YQ9TZ)
 
-GitHub therefore provides code, configurations, and safe executed-notebook
-evidence; the external package is the source for inputs that can be redistributed.
-Restricted inputs remain outside the public release, so GitHub alone is not a
-complete data bundle. See the
-[dataset instructions](0.%20Dataset/README.md) for the expected local layout.
+Place the downloaded files under `0. Dataset/` or update notebook path configuration cells before running the notebooks. This repository does not store raw or derived data files, standalone generated outputs, model checkpoints, API keys, or private credentials.
 
-## Directory map
+The API-based annotation notebook is included as a sanitized source-protocol copy. The pre-generated LLM annotation outputs needed for downstream analyses are provided in the OSF data package, so readers do not need to re-query the API to reproduce the manuscript analyses.
 
-| Stage | Public contents |
-|---|---|
-| `0. Dataset/` | External-package DOI and local input-layout guidance. |
-| `1. Code for LLM Annotation/` | Sanitized `gpt-4o-mini` prompt, JSON schema, parsing, retry, and checkpoint protocol. |
-| `2. Code for Label Comparison and Entropy/` | Released-versus-AI agreement, entropy, score dispersion, and affective co-occurrence analyses. |
-| `3. Hard Label Modeling/` | R2 released-label, AI-hard-label, and agreement-subset models. |
-| `4. Soft Label Modeling/` | R2 soft-train and full soft-label transformer workflows. |
-| `5. Multi-Task Aspect Modeling/` | R2 six-head aspect models. |
-| `6. Revision Validation and Robustness Audits/` | Human audit, routing baselines and review-budget curves, multi-LLM analyses, and bootstrap intervals. |
+## Computational Environment
 
-## Reproduction workflow
+All notebooks were developed in Google Colab and local Python environments. CPU runtime was used for classical ML/statistical analyses; GPU runtime is recommended for transformer fine-tuning and soft-label modeling.
 
-1. Download any permitted external inputs and place them under `0. Dataset/`
-   following its README, or pass equivalent authorized paths to the
-   scripts/notebooks.
-2. Create the CPU environment documented in `ENVIRONMENT.md` for the
-   revision-audit scripts.
-3. Use the public notebooks for the annotation-characterization and modeling
-   stages. GPU access is recommended for transformer training.
-4. Use the scripts in `6. Revision Validation and Robustness Audits/` for the
-   CPU-only R2 analyses.
-5. Keep regenerated standalone files under an untracked local `outputs/`
-   directory. Consult `REPRODUCIBILITY_INDEX.md` for the artifact-to-code map.
-
-The API annotation notebook is a source-protocol record. Pre-generated,
-permitted annotation inputs are used by the downstream analyses, so reproducing
-the reported tables does not require re-querying an API. A new API run may
-differ because hosted model endpoints can change.
-
-## Evidence boundary
-
-The six R2 modeling notebooks retain the executed training logs, metrics,
-tables, and figures from the reported reruns. Only cells exposing post-text
-previews or private path setup were cleared; credentials, Colab account
-metadata, and private paths were removed. The annotation, label-exploration,
-and archived revision-reader notebooks remain output-cleared. Public
-path/configuration edits are not presented as a separate re-execution of the
-modeling notebooks.
-
-The exact original Colab/GPU software image was not retained. The tested CPU
-release environment is documented separately and is not presented as the
-original transformer-training environment.
+Core dependencies include `pandas`, `numpy`, `scikit-learn`, `scipy`, `statsmodels`, `matplotlib`, `seaborn`, `PyTorch`, `transformers`, `lightgbm`, `nltk`, and `openpyxl`.
 
 ## License
 
-Code is released under the repository's
-[GNU General Public License v3.0](../LICENSE). External datasets remain subject
-to their source licenses and redistribution terms.
+Released under the repository's [GNU General Public License v3.0](../LICENSE).
