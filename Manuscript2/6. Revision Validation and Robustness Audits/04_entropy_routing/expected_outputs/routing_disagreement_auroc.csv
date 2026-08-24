@@ -1,0 +1,6 @@
+method,disagreement_auroc
+Entropy,0.5539967906887132
+Maximum score,0.5528229301309606
+Top-two margin,0.550623663572305
+Released category (OOF),0.7720577055135837
+Random (expected),0.5

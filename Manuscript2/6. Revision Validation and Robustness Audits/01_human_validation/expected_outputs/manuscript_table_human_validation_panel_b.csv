@@ -1,0 +1,6 @@
+pattern,Annotator 1,Annotator 2
+Human = AI = released,100 (33.3%),97 (32.3%)
+Human = released != AI,58 (19.3%),48 (16.0%)
+Human = AI != released,55 (18.3%),67 (22.3%)
+AI = released != Human,38 (12.7%),41 (13.7%)
+All three differ,49 (16.3%),47 (15.7%)

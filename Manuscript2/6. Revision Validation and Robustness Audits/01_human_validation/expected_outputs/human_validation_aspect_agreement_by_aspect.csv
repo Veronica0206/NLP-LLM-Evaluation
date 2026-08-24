@@ -1,0 +1,19 @@
+comparison,aspect,n_cells,exact_strength_agreement_pct,binary_presence_agreement_pct,exact_strength_agreement_n,binary_presence_agreement_n
+Annotator 1 vs. Annotator 2,Depression,300,70.3,75.3,211,226
+Annotator 1 vs. Annotator 2,Anxiety,300,64.0,72.3,192,217
+Annotator 1 vs. Annotator 2,Suicidal,300,88.0,90.3,264,271
+Annotator 1 vs. Annotator 2,Stress,300,60.0,65.7,180,197
+Annotator 1 vs. Annotator 2,Bipolar,300,93.7,96.3,281,289
+Annotator 1 vs. Annotator 2,Personality Disorder,300,87.0,90.3,261,271
+Annotator 1 vs. AI aspects,Depression,300,56.0,66.3,168,199
+Annotator 1 vs. AI aspects,Anxiety,300,66.3,75.0,199,225
+Annotator 1 vs. AI aspects,Suicidal,300,86.7,90.7,260,272
+Annotator 1 vs. AI aspects,Stress,300,58.3,68.3,175,205
+Annotator 1 vs. AI aspects,Bipolar,300,94.7,97.0,284,291
+Annotator 1 vs. AI aspects,Personality Disorder,300,89.3,92.7,268,278
+Annotator 2 vs. AI aspects,Depression,300,55.7,68.3,167,205
+Annotator 2 vs. AI aspects,Anxiety,300,56.7,70.7,170,212
+Annotator 2 vs. AI aspects,Suicidal,300,84.3,88.3,253,265
+Annotator 2 vs. AI aspects,Stress,300,61.0,67.3,183,202
+Annotator 2 vs. AI aspects,Bipolar,300,92.3,95.3,277,286
+Annotator 2 vs. AI aspects,Personality Disorder,300,85.3,89.0,256,267

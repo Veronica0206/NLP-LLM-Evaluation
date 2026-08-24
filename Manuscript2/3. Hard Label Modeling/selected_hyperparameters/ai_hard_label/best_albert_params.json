@@ -1,0 +1,13 @@
+{
+  "lr": 2.0794564875777272e-05,
+  "epochs": 6,
+  "dropout": 0.15520777454277573,
+  "dropout_modules": {
+    "albert.embeddings.dropout": 0.0,
+    "albert.encoder.albert_layer_groups.0.albert_layers.0.attention.attention_dropout": 0.0,
+    "albert.encoder.albert_layer_groups.0.albert_layers.0.attention.output_dropout": 0.0,
+    "albert.encoder.albert_layer_groups.0.albert_layers.0.dropout": 0.0,
+    "dropout": 0.15520777454277573
+  },
+  "effective_dropout": 0.15520777454277573
+}

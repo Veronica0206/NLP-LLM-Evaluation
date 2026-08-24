@@ -1,0 +1,100 @@
+{
+  "acceptance_assertions": {
+    "expected_exact_cell_counts": {
+      "Annotator 1 vs. AI aspects": {
+        "binary": 1470,
+        "three_level": 1354
+      },
+      "Annotator 1 vs. Annotator 2": {
+        "binary": 1471,
+        "three_level": 1389
+      },
+      "Annotator 2 vs. AI aspects": {
+        "binary": 1437,
+        "three_level": 1306
+      }
+    },
+    "expected_macro_metric_order": [
+      "three_level_exact_agreement",
+      "three_level_nominal_kappa",
+      "three_level_linear_weighted_kappa",
+      "binary_exact_agreement",
+      "binary_nominal_kappa"
+    ],
+    "expected_macro_values": {
+      "Annotator 1 vs. AI aspects": [
+        0.75222222,
+        0.49689069,
+        0.55762968,
+        0.81666667,
+        0.58846506
+      ],
+      "Annotator 1 vs. Annotator 2": [
+        0.77166667,
+        0.48746057,
+        0.55652075,
+        0.81722222,
+        0.55451895
+      ],
+      "Annotator 2 vs. AI aspects": [
+        0.72555556,
+        0.40927647,
+        0.49071026,
+        0.79833333,
+        0.51235876
+      ]
+    },
+    "status": "passed",
+    "tolerance": 5e-08
+  },
+  "analysis": "Human agreement audit: chance-corrected aspect agreement",
+  "aspects": [
+    "Depression",
+    "Anxiety",
+    "Suicidal",
+    "Stress",
+    "Bipolar",
+    "Personality Disorder"
+  ],
+  "bootstrap": {
+    "interval": "2.5th and 97.5th percentile item-cluster bootstrap interval",
+    "replicates": 2000,
+    "scheme": "sample 300 posts with replacement and retain all six aspect cells per selected post",
+    "seed": 2025,
+    "unit": "sampled post"
+  },
+  "comparisons": [
+    "Annotator 1 vs. Annotator 2",
+    "Annotator 1 vs. AI aspects",
+    "Annotator 2 vs. AI aspects"
+  ],
+  "definitions": {
+    "binary_nominal_kappa": "unweighted Cohen's kappa after the binary presence mapping",
+    "binary_presence": "none=0; weak or clear=1",
+    "macro": "arithmetic mean of the six aspect-specific estimates",
+    "micro": "estimate after pooling all 300 x 6 aspect cells",
+    "three_level_exact_agreement": "identical NONE/WEAK/CLEAR ratings",
+    "three_level_linear_weighted_kappa": "linear-weighted Cohen's kappa on the ordered three-level scale",
+    "three_level_nominal_kappa": "unweighted Cohen's kappa on three levels",
+    "three_level_scale": {
+      "clear": 2,
+      "none": 0,
+      "weak": 1
+    }
+  },
+  "input_files": {
+    "human_validation_aspect_matrix_300.csv": "ac1723a8c4a67903a413628540e2d0b4d438ff335b0823d949d404ae172fe9a3"
+  },
+  "outputs": {
+    "human_validation_aspect_agreement_kappa_by_aspect.csv": 18,
+    "human_validation_aspect_agreement_kappa_overall.csv": 6
+  },
+  "validation": {
+    "ai_presence_check_available": true,
+    "ai_strength_presence_consistent": true,
+    "all_strength_values_valid": true,
+    "audit_matrix_rows": 300,
+    "contains_post_text": false,
+    "unique_sample_ids": 300
+  }
+}

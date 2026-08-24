@@ -1,0 +1,7 @@
+{
+  "n_estimators": 200,
+  "learning_rate": 0.1,
+  "num_leaves": 31,
+  "max_depth": null,
+  "class_weight": null
+}

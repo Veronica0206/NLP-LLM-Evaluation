@@ -1,0 +1,8 @@
+,Normal,Depression,Anxiety,Suicidal,Stress,Bipolar,Personality Disorder
+Normal,27,19,9,3,6,1,1
+Depression,2,20,9,5,1,1,3
+Anxiety,3,0,21,1,7,0,1
+Suicidal,1,6,6,31,0,9,0
+Stress,4,10,5,2,18,0,2
+Bipolar,2,1,5,0,1,22,0
+Personality Disorder,3,4,11,0,0,1,16

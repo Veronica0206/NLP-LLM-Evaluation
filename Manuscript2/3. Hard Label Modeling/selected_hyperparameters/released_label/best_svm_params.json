@@ -1,0 +1,6 @@
+{
+  "C": 1,
+  "kernel": "linear",
+  "class_weight": null,
+  "gamma": "scale"
+}

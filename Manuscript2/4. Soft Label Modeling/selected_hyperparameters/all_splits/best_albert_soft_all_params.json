@@ -1,0 +1,16 @@
+{
+  "seed": 2025,
+  "trial": 6,
+  "best_epoch": 4,
+  "class_weighting": "none_unweighted_soft_ce",
+  "lr": 1.7871371577780496e-05,
+  "epochs": 5,
+  "dropout": 0.0007927791888235614,
+  "dropout_modules": {
+    "albert.embeddings.dropout": 0.0,
+    "albert.encoder.albert_layer_groups.0.albert_layers.0.attention.attention_dropout": 0.0,
+    "albert.encoder.albert_layer_groups.0.albert_layers.0.attention.output_dropout": 0.0,
+    "albert.encoder.albert_layer_groups.0.albert_layers.0.dropout": 0.0,
+    "dropout": 0.0007927791888235614
+  }
+}
