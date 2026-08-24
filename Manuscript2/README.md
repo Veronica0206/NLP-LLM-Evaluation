@@ -23,7 +23,14 @@ Soft-label transformer training and evaluation using LLM score-vector targets, i
 Six-head aspect-level modeling for co-occurring affective evidence and aspect-level supervision diagnostics.
 
 ### 6. Revision Validation and Robustness Audits
-R1 revision analyses, paired tests, entropy routing summaries, class-wise aspect metrics, human-validation audit tables, Supplementary Table S2 generation, and multi-LLM robustness summaries.
+R1 and R2 validation analyses, including paired tests, entropy-routing baselines and review-budget curves, class-wise aspect metrics, bootstrap confidence intervals, human-agreement audits, Supplementary Table S2 generation, and multi-LLM protocol-sensitivity checks.
+
+The R2 notebooks are:
+
+- `MentalHealth_R2_entropy_routing.ipynb`: entropy-routing review-budget curves and comparisons with random, category-based, maximum-score, and top-two-margin baselines
+- `MentalHealth_R2_multiLLM_protocol_sensitivity.ipynb`: multi-LLM robustness analyses across model, prompt, temperature, seed, entropy, hard-label, and aspect outputs
+- `MentalHealth_R2_aspect_mean_F1_bootstrap.ipynb`: bootstrap 95% confidence intervals for weighted and macro mean aspect F1
+- `MentalHealth_R2_human_aspect_chance_corrected_agreement.ipynb`: exact and chance-corrected agreement for three-level aspect strength and binary aspect presence
 
 ## Naming Convention
 
@@ -38,6 +45,7 @@ MentalHealth_[Analysis_or_Modeling_Task].ipynb
 - `MentalHealth_*_multiclass.ipynb`: hard-label multiclass modeling notebooks
 - `MentalHealth_4omini_Soft*.ipynb`: soft-label modeling notebooks
 - `MentalHealth_R1_*.ipynb`: revision validation and robustness audit notebooks
+- `MentalHealth_R2_*.ipynb`: R2 validation and protocol-robustness notebooks
 
 ## Data
 
