@@ -24,7 +24,7 @@ tested CPU analyses only; it is not an original GPU/Colab lock file.
 
 | Component | What is documented |
 |---|---|
-| Six R2 modeling notebooks | Public code records training seed 2025, grouped-split constants, model settings, and selected output paths. Notebook outputs are cleared. |
+| Six R2 modeling notebooks | Public code records training seed 2025, grouped-split constants, model settings, selected output paths, and safe executed result outputs from the reported reruns. Raw post previews and private setup outputs are cleared. |
 | Modeling devices | Internal run provenance recorded CPU for hard-label Panels A and C, and CUDA for Panel B, both soft-label workflows, and the six-head aspect workflow. These are provenance notes, not public executed output. |
 | Transformer checkpoints | Public code identifies `albert-base-v2` and `dmis-lab/biobert-v1.1`. |
 | Selected model settings | Public JSON files under the three modeling stages preserve the chosen hyperparameters. |

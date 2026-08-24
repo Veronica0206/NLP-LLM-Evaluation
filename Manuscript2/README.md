@@ -11,7 +11,7 @@ continue to work. The modeling notebooks now reflect the R2 analysis settings.
 
 - Sanitized notebooks documenting the annotation and analysis workflows.
 - The six R2 downstream-modeling notebooks for hard labels, soft labels, and
-  six aspect heads.
+  six aspect heads, including their safe executed result outputs.
 - Selected-hyperparameter JSON files for every reported modeling branch.
 - CPU scripts for entropy routing, multi-LLM robustness, aspect mean-F1
   intervals, and chance-corrected human aspect agreement.
@@ -72,12 +72,13 @@ differ because hosted model endpoints can change.
 
 ## Evidence boundary
 
-All public notebook outputs were cleared during release sanitization. The
-notebooks preserve code and configuration, while the small files under
-`expected_outputs/` preserve safe aggregate R2 result evidence for the scripted
-revision analyses. Row-level text previews, credentials, and execution-user
-metadata are not part of the public copies. Public path/configuration edits are
-not presented as a re-execution of the modeling notebooks.
+The six R2 modeling notebooks retain the executed training logs, metrics,
+tables, and figures from the reported reruns. Only cells exposing post-text
+previews or private path setup were cleared; credentials, Colab account
+metadata, and private paths were removed. The annotation, label-exploration,
+and archived revision-reader notebooks remain output-cleared. Public
+path/configuration edits are not presented as a separate re-execution of the
+modeling notebooks.
 
 The exact original Colab/GPU software image was not retained. The tested CPU
 release environment is documented separately and is not presented as the
