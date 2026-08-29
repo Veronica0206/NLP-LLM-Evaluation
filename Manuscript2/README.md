@@ -19,6 +19,7 @@ transparency.
 | `3b2_Soft_and_Aspect_Modeling` | 3B. Downstream Supervision and Modeling Branches | Soft-label transformer training (both evaluation regimes), six-head aspect modeling, aspect-mean bootstrap intervals |
 | `4a_Human_Agreement_Audit` | 4A. Human Agreement Audit | 300-post non-clinician agreement audit: primary labels and chance-corrected aspect agreement |
 | `4b_MultiLLM_Protocol_Audit` | 4B. Multi-LLM Protocol Sensitivity Audit | 100-item crossed protocol-sensitivity audit (four LLMs, three prompts, six temperatures, three seeds) |
+| `prompts` | 4B (support) | Exact system-prompt strings (minimal, rubric, chain-of-thought) and crossing constants used to construct the multi-LLM audit grid |
 
 ## Reproduction Map
 
@@ -42,6 +43,18 @@ the configuration cells of the `3b1` and `3b2` notebooks.
 The analysis-ready data package is shared separately through OSF.
 
 - DOI: [10.17605/OSF.IO/YQ9TZ](https://doi.org/10.17605/OSF.IO/YQ9TZ)
+- During peer review, the package is accessible through the anonymized
+  view-only link:
+  <https://osf.io/yq9tz/overview?view_only=c3805375590e4873b907671df16fc4b5>
+  (the DOI resolves to the project's public page, which remains private
+  until acceptance).
+
+The OSF package provides `mental_health_unified_labels_final.csv` (the
+unified-labels corpus consumed by the comparison, entropy, and modeling
+notebooks), the two 300-post human-audit annotator workbooks, and the
+multi-LLM audit files `mh_labeling_final.csv` (the 21,600-record crossed
+evaluation output consumed by `4b_MultiLLM_Protocol_Audit`) and
+`mh_sample_100.csv` (the 100-post entropy-stratified audit sample).
 
 This repository does not store raw or derived data files, generated outputs,
 model checkpoints, API keys, or private credentials. Notebook path
@@ -61,7 +74,10 @@ recommended for transformer fine-tuning and soft-label modeling.
 
 Core dependencies include `pandas`, `numpy`, `scikit-learn`, `scipy`,
 `statsmodels`, `matplotlib`, `seaborn`, `PyTorch`, `transformers`,
-`lightgbm`, `nltk`, and `openpyxl`.
+`lightgbm`, `nltk`, and `openpyxl`. The transformer fine-tuning notebooks
+pin `transformers==4.41.1` in their install cells; the remaining libraries
+ran at the Colab image defaults current at execution time and are not
+version-pinned.
 
 ## License
 
