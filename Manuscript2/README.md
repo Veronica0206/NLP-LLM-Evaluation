@@ -66,6 +66,12 @@ copy. The pre-generated LLM annotation outputs needed for downstream analyses
 are provided in the OSF data package, so readers do not need to re-query the
 API to reproduce the manuscript analyses.
 
+The provider-calling generation harness for the multi-LLM audit and the
+300-post human-audit sampling script are not part of this repository; the
+exact system prompts (`prompts/`) and the pre-generated audit outputs and
+sample files (OSF) are archived instead, so the reported analyses are
+reproducible without re-querying providers.
+
 ## Computational Environment
 
 All notebooks were developed in Google Colab and local Python environments.
@@ -74,10 +80,12 @@ recommended for transformer fine-tuning and soft-label modeling.
 
 Core dependencies include `pandas`, `numpy`, `scikit-learn`, `scipy`,
 `statsmodels`, `matplotlib`, `seaborn`, `PyTorch`, `transformers`,
-`lightgbm`, `nltk`, and `openpyxl`. The transformer fine-tuning notebooks
-pin `transformers==4.41.1` in their install cells; the remaining libraries
-ran at the Colab image defaults current at execution time and are not
-version-pinned.
+`lightgbm`, `nltk`, and `openpyxl`. The modeling notebooks reference
+`transformers==4.41.1` in commented install lines; executed library
+versions were the Colab image defaults current at execution time and are
+not version-pinned for the modeling runs. The comparison, routing,
+cluster-sensitivity, and audit notebooks record the executed package
+versions in their output manifests.
 
 ## License
 

@@ -9,8 +9,8 @@ to construct the audit grid: 100 entropy-stratified posts x 4 evaluators x
 
 Prompt gradient:
   MINIMAL - bare classification instruction; tests default judgment.
-  RUBRIC  - the main annotation rubric, with the output format adapted to
-            include a severity field for the audit schema.
+  RUBRIC  - the main annotation rubric, verbatim apart from cosmetic
+            formatting of the instruction dividers.
   COT     - rubric plus a structured checklist, anti-default-bias
             instructions, and forced reasoning.
 

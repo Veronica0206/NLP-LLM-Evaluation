@@ -21,8 +21,8 @@ The annotation protocol uses `gpt-4o-mini` with `temperature=0`. The runtime
 configuration in the notebook specifies batch size, concurrency, retry, and
 checkpoint settings. The parser records the returned label, score vector,
 aspect flags, model version, system fingerprint, timestamp, and raw JSON in
-the intermediate output; the final cleaned annotation file removes
-`u_raw_json`.
+the intermediate output; the released annotation file retains the
+`u_raw_json` field alongside the parsed columns.
 
 The pre-generated annotation outputs needed for downstream analyses are
 provided through the OSF data package. Readers can inspect the full
