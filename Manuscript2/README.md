@@ -1,51 +1,37 @@
-# Manuscript 2: LLM-Based Annotation for Affective Text Classification
+# LLM-Based Annotation for Affective Text Classification
 
-This folder contains the Google Colab notebooks supporting the experiments described in the manuscript. The notebooks are organized by analysis stage and retain executed cell outputs for transparency.
+This repository contains the Google Colab notebooks supporting the experiments
+described in the manuscript. Folders follow the analysis steps in Fig. 1 of the
+manuscript, and all notebooks retain executed cell outputs for transparency.
 
 ## Structure
 
-### 0. Dataset
-OSF data-package notes and local data-layout guidance. The analysis-ready data files are shared separately through OSF and are not stored in this repository.
+| Folder | Fig. 1 step | Contents |
+|---|---|---|
+| `1_Dataset` | (1) Corpus | OSF data-package pointer and local data-layout guidance |
+| `2_LLM_Annotation` | (2) Annotation protocol | Sanitized rubric-guided `gpt-4o-mini` annotation notebook (prompt, JSON schema, settings, retry/checkpoint logic) |
+| `3a_Label_Comparison_and_Entropy` | (3) Diagnostics | Released-label vs. LLM-label concordance, entropy and score-dispersion diagnostics, co-occurrence checks, review-budget routing, duplicate-text cluster sensitivity |
+| `3b_Hard_Label_Modeling` | (3) Hard-label learnability | Multiclass modeling under released-label, LLM-label, and agreement-subset supervision |
+| `3c_Soft_and_Aspect_Modeling` | (3) Soft and aspect supervision | Soft-label transformer training (both evaluation regimes), six-head aspect modeling, aspect-mean bootstrap intervals |
+| `4a_Human_Agreement_Audit` | (4) Human audit | 300-post non-clinician agreement audit: primary labels and chance-corrected aspect agreement |
+| `4b_MultiLLM_Protocol_Audit` | (4) Multi-LLM audit | 100-item crossed protocol-sensitivity audit (four LLMs, three prompts, six temperatures, three seeds) |
 
-### 1. Code for LLM Annotation
-Sanitized rubric-guided LLM annotation protocol using `gpt-4o-mini`, including the prompt, JSON output schema, model settings, retry/checkpoint logic, and post-processing steps. Private credential-check lines and local metadata were removed; cell outputs are retained.
+## Reproduction Map
 
-### 2. Code for Label Comparison and Entropy
-Released-label versus LLM-label concordance analysis, score-vector entropy diagnostics, score dispersion summaries, and affective co-occurrence checks.
+| Manuscript item | Notebook |
+|---|---|
+| Agreement, confusion matrix (Table S3), entropy distribution (Fig. S1), ECE, duplicate-post analysis, co-occurrence results | `3a/Label_Comparison_and_Entropy.ipynb` |
+| Logistic regressions (Table I), zero-entropy block diagnostics | `3a/Label_Comparison_and_Entropy.ipynb` |
+| Canonical tie-aware AUROC, tie-preserving strata, review-budget routing (Fig. S2, Table S5) | `3a/Entropy_Routing.ipynb` |
+| Cluster-aware sensitivity analyses (Table S4) | `3a/Cluster_Sensitivity.ipynb` |
+| Hard-label panels (Table II; Tables S6--S8) | `3b/Hard_OriginalLabel.ipynb`, `3b/Hard_AILabel.ipynb`, `3b/Hard_AgreementSubset.ipynb` |
+| Soft-label results (Table III) | `3c/Soft_TrainOnly.ipynb`, `3c/Soft_TrainAll.ipynb` |
+| Aspect-head results (Table IV; Table S9) | `3c/Aspect_MultiTask.ipynb`, `3c/Aspect_Mean_F1_Bootstrap.ipynb` |
+| Human agreement audit (Table V; Table S10) | `4a/Human_Agreement_Audit.ipynb`, `4a/Human_Aspect_Agreement.ipynb` |
+| Multi-LLM protocol sensitivity (Tables S11--S13) | `4b/MultiLLM_Protocol_Sensitivity.ipynb` |
 
-### 3. Hard Label Modeling
-Primary hard-label downstream modeling comparing released-label, LLM-label, and agreement-subset supervision regimes across multiclass classifiers.
-
-### 4. Soft Label Modeling
-Soft-label transformer training and evaluation using LLM score-vector targets, including soft-train/hard-test and full soft-label evaluation workflows.
-
-### 5. Multi-Task Aspect Modeling
-Six-head aspect-level modeling for co-occurring affective evidence and aspect-level supervision diagnostics.
-
-### 6. Revision Validation and Robustness Audits
-R1 and R2 validation analyses, including paired tests, entropy-routing baselines and review-budget curves, class-wise aspect metrics, bootstrap confidence intervals, human-agreement audits, Supplementary Table S2 generation, and multi-LLM protocol-sensitivity checks.
-
-The R2 notebooks are:
-
-- `MentalHealth_R2_entropy_routing.ipynb`: entropy-routing review-budget curves and comparisons with random, category-based, maximum-score, and top-two-margin baselines
-- `MentalHealth_R2_multiLLM_protocol_sensitivity.ipynb`: multi-LLM robustness analyses across model, prompt, temperature, seed, entropy, hard-label, and aspect outputs
-- `MentalHealth_R2_aspect_mean_F1_bootstrap.ipynb`: bootstrap 95% confidence intervals for weighted and macro mean aspect F1
-- `MentalHealth_R2_human_aspect_chance_corrected_agreement.ipynb`: exact and chance-corrected agreement for three-level aspect strength and binary aspect presence
-
-## Naming Convention
-
-Notebook names follow the analysis stage and task:
-
-```text
-MentalHealth_[Analysis_or_Modeling_Task].ipynb
-```
-
-- `MentalHealth_4omini_Labeling.ipynb`: LLM annotation protocol and output-schema documentation
-- `Original_AI_Labels_Exploration.ipynb`: released-label versus LLM-label comparison and entropy diagnostics
-- `MentalHealth_*_multiclass.ipynb`: hard-label multiclass modeling notebooks
-- `MentalHealth_4omini_Soft*.ipynb`: soft-label modeling notebooks
-- `MentalHealth_R1_*.ipynb`: revision validation and robustness audit notebooks
-- `MentalHealth_R2_*.ipynb`: R2 validation and protocol-robustness notebooks
+Hyperparameter search spaces and fixed settings (Table S2) are documented in
+the configuration cells of the `3b` and `3c` notebooks.
 
 ## Data
 
@@ -53,16 +39,26 @@ The analysis-ready data package is shared separately through OSF.
 
 - DOI: [10.17605/OSF.IO/YQ9TZ](https://doi.org/10.17605/OSF.IO/YQ9TZ)
 
-Place the downloaded files under `0. Dataset/` or update notebook path configuration cells before running the notebooks. This repository does not store raw or derived data files, standalone generated outputs, model checkpoints, API keys, or private credentials.
+This repository does not store raw or derived data files, generated outputs,
+model checkpoints, API keys, or private credentials. Notebook path
+configuration cells reference the authors' working layout; update them to
+point at the downloaded OSF files before running.
 
-The API-based annotation notebook is included as a sanitized source-protocol copy. The pre-generated LLM annotation outputs needed for downstream analyses are provided in the OSF data package, so readers do not need to re-query the API to reproduce the manuscript analyses.
+The API-based annotation notebook is included as a sanitized source-protocol
+copy. The pre-generated LLM annotation outputs needed for downstream analyses
+are provided in the OSF data package, so readers do not need to re-query the
+API to reproduce the manuscript analyses.
 
 ## Computational Environment
 
-All notebooks were developed in Google Colab and local Python environments. CPU runtime was used for classical ML/statistical analyses; GPU runtime is recommended for transformer fine-tuning and soft-label modeling.
+All notebooks were developed in Google Colab and local Python environments.
+CPU runtime was used for classical ML/statistical analyses; GPU runtime is
+recommended for transformer fine-tuning and soft-label modeling.
 
-Core dependencies include `pandas`, `numpy`, `scikit-learn`, `scipy`, `statsmodels`, `matplotlib`, `seaborn`, `PyTorch`, `transformers`, `lightgbm`, `nltk`, and `openpyxl`.
+Core dependencies include `pandas`, `numpy`, `scikit-learn`, `scipy`,
+`statsmodels`, `matplotlib`, `seaborn`, `PyTorch`, `transformers`,
+`lightgbm`, `nltk`, and `openpyxl`.
 
 ## License
 
-Released under the repository's [GNU General Public License v3.0](../LICENSE).
+Released under the [GNU General Public License v3.0](LICENSE).
