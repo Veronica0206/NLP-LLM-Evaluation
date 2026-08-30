@@ -1,4 +1,4 @@
-# LLM-Based Annotation for Affective Text Classification
+# Rubric-Guided Annotation for Affective Text Classification: Label-Space Overlap, Multi-View Supervision, and Entropy Diagnostics
 
 This repository contains the Google Colab notebooks supporting the experiments
 described in the manuscript. Folders follow the analysis steps in Fig. 1 of the
@@ -66,11 +66,21 @@ copy. The pre-generated LLM annotation outputs needed for downstream analyses
 are provided in the OSF data package, so readers do not need to re-query the
 API to reproduce the manuscript analyses.
 
-The provider-calling generation harness for the multi-LLM audit and the
-300-post human-audit sampling script are not part of this repository; the
-exact system prompts (`prompts/`) and the pre-generated audit outputs and
-sample files (OSF) are archived instead, so the reported analyses are
-reproducible without re-querying providers.
+The two audits follow the same pattern: both the data and the analysis
+code are available. For the 300-post human agreement audit, the OSF
+package provides the audit sample and both completed annotator workbooks,
+and `4a_Human_Agreement_Audit` contains the full agreement analysis. For
+the multi-LLM protocol audit, `prompts/` contains the exact system-prompt
+strings and crossing constants that defined the 21,600-record evaluation
+grid, the OSF package provides the complete crossed outputs
+(`mh_labeling_final.csv`) and the 100-post stratified sample
+(`mh_sample_100.csv`), and `4b_MultiLLM_Protocol_Audit` contains the full
+sensitivity analysis. The provider-calling and sample-drawing steps are
+represented by these exact inputs and archived outputs rather than by
+rerunnable scripts; re-querying hosted endpoints would not regenerate the
+archived outputs in any case, because hosted model versions change over
+time. Every reported audit number is computed by the audit notebooks from
+the archived files.
 
 ## Computational Environment
 
@@ -80,12 +90,17 @@ recommended for transformer fine-tuning and soft-label modeling.
 
 Core dependencies include `pandas`, `numpy`, `scikit-learn`, `scipy`,
 `statsmodels`, `matplotlib`, `seaborn`, `PyTorch`, `transformers`,
-`lightgbm`, `nltk`, and `openpyxl`. The modeling notebooks reference
-`transformers==4.41.1` in commented install lines; executed library
-versions were the Colab image defaults current at execution time and are
-not version-pinned for the modeling runs. The comparison, routing,
-cluster-sensitivity, and audit notebooks record the executed package
-versions in their output manifests.
+`lightgbm`, `nltk`, and `openpyxl`. Version provenance differs by
+notebook family. The routing, cluster-sensitivity, and multi-LLM audit
+notebooks record executed package versions in their output manifests; the
+other CPU-side notebooks retain executed outputs and kernel metadata.
+The modeling notebooks ran on the Colab GPU image current at execution
+time and are not version-pinned; their commented install lines reference
+`transformers==4.41.1` as the tested reference version, and their
+retained outputs record the executed configurations, seeds, search
+spaces, and results against which any re-run can be checked. For new
+runs, installing the referenced `transformers` version on a current Colab
+image is the closest starting point to the original environment.
 
 ## License
 
