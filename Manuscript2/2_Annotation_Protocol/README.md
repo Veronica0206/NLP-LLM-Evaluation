@@ -5,7 +5,7 @@ This folder contains a sanitized source copy of the LLM annotation notebook:
 - `LLM_Annotation_Labeling.ipynb`
 
 The notebook documents the rubric-conditioned annotation protocol used to
-generate the hard labels, score vectors, and aspect ratings used in the
+generate the forced-choice labels, class-score vectors, and aspect ratings used in the
 manuscript. The complete prompt and JSON output schema are in the cell
 defining `BATCH_ANNOTATION_INSTRUCTIONS_V2`.
 

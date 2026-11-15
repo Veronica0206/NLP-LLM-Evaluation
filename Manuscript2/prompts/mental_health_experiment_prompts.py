@@ -1,6 +1,6 @@
 """
 System prompts and grid specification for the multi-LLM protocol-sensitivity audit
-(4b_MultiLLM_Protocol_Audit).
+(4_MultiLLM_Audit).
 
 This module archives the exact system-prompt strings and crossing constants used
 to construct the audit grid: 100 entropy-stratified posts x 4 evaluators x
@@ -47,7 +47,7 @@ Valid JSON only. No explanation. No markdown.""",
 }
 
 # --- RUBRIC: exact instruction text of the main annotation protocol ---
-# (BATCH_ANNOTATION_INSTRUCTIONS_V2; see 2_LLM_Annotation/). Only the output
+# (BATCH_ANNOTATION_INSTRUCTIONS_V2; see 2_Annotation_Protocol/). Only the output
 # format section is adapted to the audit schema.
 MH_PROMPT_RUBRIC = {
     "name": "mh_rubric",
