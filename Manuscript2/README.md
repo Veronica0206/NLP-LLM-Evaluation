@@ -28,7 +28,7 @@ All notebooks retain executed cell outputs for transparency.
 | Manuscript item | Notebook |
 |---|---|
 | Table 1: agreement on the aspect ratings | `3_Multivariate_Evidence/Multivariate_Evidence.ipynb`; intervals for the four LLMs from `4_MultiLLM_Audit/MultiLLM_Protocol_Sensitivity.ipynb` |
-| Table 2: multi-task models | `6_MultiTask_Models/Aspect_MultiTask.ipynb` (training and test predictions); `3_Multivariate_Evidence/Multivariate_Evidence.ipynb` (per-dimension F1); `6_MultiTask_Models/Aspect_Mean_F1_Bootstrap.ipynb` (intervals for the six-head mean) |
+| Table 2: multi-task models | `6_MultiTask_Models/Aspect_MultiTask.ipynb` (training and test predictions); `3_Multivariate_Evidence/Multivariate_Evidence.ipynb` (per-dimension F1 and Panel C, agreement with the AI ratings); `6_MultiTask_Models/Aspect_Mean_F1_Bootstrap.ipynb` (intervals for the six-head mean) |
 | Tables 3 and 4: the forced-choice label and entropy | `3_Multivariate_Evidence/Multivariate_Evidence.ipynb` |
 | Supplementary Table S1: upstream sources | Documentation; no computation |
 | Supplementary Tables S2, S6, S7 | `4_MultiLLM_Audit/MultiLLM_Protocol_Sensitivity.ipynb`; the weak-versus-clear kappa in S6, Panel C, from `3_Multivariate_Evidence/Multivariate_Evidence.ipynb` |
