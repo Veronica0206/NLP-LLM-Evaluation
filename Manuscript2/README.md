@@ -36,7 +36,7 @@ All notebooks retain executed cell outputs for transparency.
 | Supplementary Tables S4, S5: hyperparameter search and selected configurations | Configuration cells and retained outputs of `6_MultiTask_Models/Aspect_MultiTask.ipynb` and the notebooks in `7_Supplementary_Analyses/Label_and_Score_Models` |
 | Supplementary Tables S8, S10, S11, S14 to S21, S23, S26 to S28, S30, S31 | `3_Multivariate_Evidence/Multivariate_Evidence.ipynb` |
 | Supplementary Table S9: agreement on each aspect rating | `5_Human_Audit/Human_Aspect_Agreement.ipynb` |
-| Supplementary Table S12: F1 intervals of the multi-task models | `6_MultiTask_Models/Aspect_MultiTask.ipynb` (each head); `6_MultiTask_Models/Aspect_Mean_F1_Bootstrap.ipynb` (mean of six); `7_Supplementary_Analyses/Label_Comparison_and_Entropy/Cluster_Sensitivity.ipynb` (cluster bootstrap) |
+| Supplementary Table S12: F1 intervals of the multi-task models and their agreement with the AI ratings | `6_MultiTask_Models/Aspect_MultiTask.ipynb` (each head); `6_MultiTask_Models/Aspect_Mean_F1_Bootstrap.ipynb` (mean of six); `7_Supplementary_Analyses/Label_Comparison_and_Entropy/Cluster_Sensitivity.ipynb` (cluster bootstrap); `3_Multivariate_Evidence/Multivariate_Evidence.ipynb` (Panel C, agreement by dimension) |
 | Supplementary Table S13: per-class metrics of the multi-task models | Test predictions from `6_MultiTask_Models/Aspect_MultiTask.ipynb` |
 | Supplementary Tables S22, S29, S32; Supplementary Figures S1 and S2 | `7_Supplementary_Analyses/Label_Comparison_and_Entropy/Entropy_Routing.ipynb` |
 | Supplementary Tables S24, S25: confusion matrix and three-way patterns | `5_Human_Audit/Human_Agreement_Audit.ipynb` |
