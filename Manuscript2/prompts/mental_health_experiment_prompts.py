@@ -277,7 +277,7 @@ SEEDS = [1001, 2001, 3001]
 BATCH_SIZE = 20
 PROMPT_TYPES = ["minimal", "rubric", "cot"]
 # The audit items are the 100-post entropy-stratified sample
-# (mh_sample_100.csv in the OSF data package; see Supplementary Table S11).
+# (mh_sample_100.csv in the OSF data package; see Supplementary Table S2).
 
 
 # ============================================================
