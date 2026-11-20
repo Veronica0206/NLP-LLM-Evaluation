@@ -27,11 +27,11 @@ All notebooks retain executed cell outputs for transparency.
 
 | Manuscript item | Notebook |
 |---|---|
-| Table 1: agreement on the aspect ratings | `3_Multivariate_Evidence/Multivariate_Evidence.ipynb`; intervals for the four LLMs from `4_MultiLLM_Audit/MultiLLM_Protocol_Sensitivity.ipynb` |
-| Table 2: multi-task models | `6_MultiTask_Models/Aspect_MultiTask.ipynb` (training and test predictions); `3_Multivariate_Evidence/Multivariate_Evidence.ipynb` (per-dimension F1 and Panel C, agreement with the AI ratings); `6_MultiTask_Models/Aspect_Mean_F1_Bootstrap.ipynb` (intervals for the six-head mean) |
+| Table 1: agreement on the aspect ratings | `3_Multivariate_Evidence/Multivariate_Evidence.ipynb`, including the agreement on each level of the three-level rating and its value expected by chance (Panel B); intervals for the four LLMs over all conditions in Panel A from `4_MultiLLM_Audit/MultiLLM_Protocol_Sensitivity.ipynb` |
+| Table 2: multi-task models | `6_MultiTask_Models/Aspect_MultiTask.ipynb` (training and test predictions); `3_Multivariate_Evidence/Multivariate_Evidence.ipynb` (Panel A, agreement with the AI ratings, and the F1 by dimension in Panel C); `6_MultiTask_Models/Aspect_Mean_F1_Bootstrap.ipynb` (intervals for the six-head mean) |
 | Tables 3 and 4: the forced-choice label and entropy | `3_Multivariate_Evidence/Multivariate_Evidence.ipynb` |
 | Supplementary Table S1: upstream sources | Documentation; no computation |
-| Supplementary Tables S2, S6, S7 | `4_MultiLLM_Audit/MultiLLM_Protocol_Sensitivity.ipynb`; the weak-versus-clear kappa in S6, Panel C, and the agreement within each prompt, temperature, and seed in S7, Panel C, from `3_Multivariate_Evidence/Multivariate_Evidence.ipynb` |
+| Supplementary Tables S2, S6, S7 | `4_MultiLLM_Audit/MultiLLM_Protocol_Sensitivity.ipynb`; the agreement on each level in S6, Panel D, and the agreement within each prompt, temperature, and seed in S7, Panel C, from `3_Multivariate_Evidence/Multivariate_Evidence.ipynb` |
 | Supplementary Table S3: composition of the 300-post audit sample | Archived output of the sample-drawing step; not computed by a notebook in this repository |
 | Supplementary Tables S4, S5: hyperparameter search and selected configurations | Configuration cells and retained outputs of `6_MultiTask_Models/Aspect_MultiTask.ipynb` and the notebooks in `7_Supplementary_Analyses/Label_and_Score_Models` |
 | Supplementary Tables S8, S10, S11, S14 to S21, S23, S26 to S28, S30, S31 | `3_Multivariate_Evidence/Multivariate_Evidence.ipynb` |
